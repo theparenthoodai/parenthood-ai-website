@@ -19,6 +19,8 @@ a:hover{color:var(--terracotta-600)}
 .lift{transition:transform .2s ease,box-shadow .2s ease}
 .lift:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg)}
 .post-body p{margin:0 0 22px;font-size:17px;line-height:1.8;color:var(--charcoal-700)}
+/* guide download button + meta label row (featured guide, and any future guide) */
+.guide-cta{display:flex;gap:12px;align-items:center}
 
 /* nav/footer shared across pages */
 .site-nav{display:flex;align-items:center;justify-content:space-between;padding:20px 60px;background:var(--cream-200);border-bottom:1px solid var(--border-subtle);position:sticky;top:0;z-index:5}
@@ -79,4 +81,7 @@ img{max-width:100%}
   /* About page closing + signature */
   .about-close{font-size:23px !important}
   .about-sig{font-size:40px !important}
+
+  /* guide download: stack the meta label under the button, both centered */
+  .guide-cta{flex-direction:column;align-items:center;text-align:center;gap:10px}
 }
