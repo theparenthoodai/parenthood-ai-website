@@ -1,0 +1,11 @@
+/* PARENTHOOD.AI — base resets */
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--surface-page);
+  color: var(--text-primary);
+  font: var(--text-body-md);
+  -webkit-font-smoothing: antialiased;
+}
+a { color: var(--action-accent-hover); text-decoration: none; }
+a:hover { color: var(--charcoal-900); text-decoration: underline; }

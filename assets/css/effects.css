@@ -1,0 +1,22 @@
+/* PARENTHOOD.AI — Elevation, motion & border tokens
+   Modern Organic + Modern Luxury: soft diffuse shadows (never harsh), gentle
+   ease-out motion, no bounce. Borders are thin and warm-toned, never pure
+   black/gray.
+*/
+:root {
+  --shadow-sm: 0 1px 2px rgba(17,17,17,0.05), 0 1px 1px rgba(17,17,17,0.04);
+  --shadow-md: 0 4px 16px rgba(50,42,35,0.08), 0 1px 3px rgba(50,42,35,0.06);
+  --shadow-lg: 0 12px 32px rgba(50,42,35,0.12), 0 2px 8px rgba(50,42,35,0.06);
+  --shadow-inset: inset 0 1px 2px rgba(17,17,17,0.05);
+
+  --border-width-hairline: 1px;
+  --border-width-default: 1.5px;
+
+  --ease-standard: cubic-bezier(0.22, 0.61, 0.36, 1);
+  --ease-in: cubic-bezier(0.4, 0, 1, 1);
+  --duration-fast: 120ms;
+  --duration-standard: 220ms;
+  --duration-slow: 400ms;
+
+  --blur-glass: 16px;
+}

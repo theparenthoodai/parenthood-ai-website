@@ -1,0 +1,105 @@
+/* PARENTHOOD.AI — Color tokens
+   Sourced from the real Brand Identity & Style Guide (PDF), Section 03 —
+   Color Palette — with one user-directed correction: the guide's
+   "Taupe / Lavender" accent (#D9CEE2) is replaced by a warm tan/terracotta
+   system per the user's supplied swatch reference (no lavender in the brand).
+*/
+:root {
+  /* ---- Base: Cream (Primary Background) — brand-spec ---- */
+  --cream-50:  #FDFBF9;
+  --cream-100: #F9F1EC; /* brand-spec "Light Blush" */
+  --cream-200: #F1ECE9; /* user swatch override — replaces F4EFEA as the working cream */
+  --cream-300: #E7DED7;
+
+  /* ---- Base: Tan / Sand (replaces Taupe-Lavender accent block) — user swatch ---- */
+  --tan-100: #F0E9E1;
+  --tan-200: #E6DACC;
+  --tan-300: #DCD2CA; /* user swatch base */
+  --tan-400: #C7B8A9;
+  --tan-500: #AD9985;
+
+  /* ---- Base: Sand (Secondary Typography) — brand-spec ---- */
+  --sand-100: #EFE7DE;
+  --sand-200: #DCD0C6;
+  --sand-300: #C3B0A1; /* brand-spec base */
+  --sand-400: #9C8879;
+  --sand-500: #7C6A5D;
+
+  /* ---- Base: Charcoal (Primary Typography) — brand-spec ---- */
+  --charcoal-900: #111111; /* brand-spec base — use for TEXT */
+  --charcoal-700: #322E2B;
+  --charcoal-500: #4A4642;
+  --charcoal-300: #7A736C;
+
+  /* ---- Base: Ink (dark slide BACKGROUNDS) ----
+     Confirmed from real Canva carousel templates: dark-background slides use
+     a warmer near-black (#1A1512), not pure #111111 — reserve #111111 for
+     text/wordmark and use ink for solid dark backgrounds. */
+  --ink-900: #1A1512;
+  --ink-800: #241D19;
+
+  /* ---- Base: Dusty Tan (5th palette color, confirmed from real templates) ----
+     A muted, warm mauve-tan used as a solid slide background — distinct from
+     the lighter --tan-* secondary-surface ramp above. */
+  --dustytan-500: #BAA390;
+  --dustytan-600: #9C8873;
+
+  /* ---- Base: Rust / Terracotta (Accent / Headers / CTA) ----
+     Guide specifies #9B3A1A; user's supplied swatch corrects this to a
+     softer, lighter terracotta #B57168 — using the user's value as the
+     working accent, keeping the deeper rust as a "strong" variant. */
+  --terracotta-400: #C68F7C;
+  --terracotta-500: #B57168; /* user swatch — primary accent */
+  --terracotta-600: #9B3A1A; /* brand-spec deep rust, for CTA banners/emphasis */
+  --terracotta-700: #7C2E14;
+
+  /* ---- Base: Semantic hues (derived — muted/earthy to match palette) ---- */
+  --sage-400: #8A9A7C;
+  --sage-600: #647155;
+  --amber-400: #C9944F;
+  --amber-600: #A5723A;
+  --dustyblue-400: #8398AA;
+  --dustyblue-600: #5F7086;
+
+  /* ================= Semantic aliases ================= */
+  --surface-page:      var(--cream-200);
+  --surface-raised:    var(--cream-50);
+  --surface-card:      #FFFFFF;
+  --surface-blush:     var(--cream-100);
+  --surface-accent:    var(--tan-200);
+  --surface-accent-soft: var(--tan-100);
+  --surface-sunken:    var(--cream-300);
+  --surface-inverse:   var(--ink-900);
+  --surface-dustytan:  var(--dustytan-500);
+
+  --text-primary:      var(--charcoal-900);
+  --text-secondary:    var(--sand-300);
+  --text-muted:        var(--sand-400);
+  --text-on-accent:    var(--charcoal-900);
+  --text-on-inverse:   var(--cream-100);
+  --text-accent:       var(--terracotta-500);
+  --text-header:       var(--sand-300);
+
+  --border-subtle:     var(--sand-200);
+  --border-default:    var(--tan-400);
+  --border-strong:     var(--charcoal-700);
+  --border-accent:     var(--terracotta-500);
+
+  --action-primary:        var(--charcoal-900);
+  --action-primary-hover:  var(--charcoal-700);
+  --action-primary-press:  #000000;
+  --action-accent:         var(--terracotta-500);
+  --action-accent-hover:   var(--terracotta-600);
+  --action-accent-strong:  var(--terracotta-600); /* CTA banners, per guide */
+
+  --state-success: var(--sage-600);
+  --state-success-bg: #EEF1E9;
+  --state-warning: var(--amber-600);
+  --state-warning-bg: #FBF1E5;
+  --state-error:   var(--terracotta-700);
+  --state-error-bg: #FBEEEA;
+  --state-info:    var(--dustyblue-600);
+  --state-info-bg: #EBF0F5;
+
+  --focus-ring: var(--terracotta-500);
+}

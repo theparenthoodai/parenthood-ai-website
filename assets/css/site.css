@@ -1,0 +1,34 @@
+/* PARENTHOOD.AI — site-wide component styles, shared across every page */
+body{margin:0;background:var(--cream-200);font-family:"Montserrat",system-ui,sans-serif}
+a{color:var(--terracotta-500);text-decoration:none}
+a:hover{color:var(--terracotta-600)}
+.wm{font-family:"Montserrat";font-weight:600;font-size:11px;letter-spacing:.22em;color:var(--sand-400)}
+.serif{font-family:"Cormorant Garamond",serif}
+.script{font-family:"Great Vibes",cursive}
+.bebas{font-family:"Bebas Neue",sans-serif}
+.mono{font-family:"Space Mono",monospace}
+.pill{display:inline-flex;align-items:center;justify-content:center;gap:8px;border-radius:999px;font-family:"Montserrat";font-weight:600;cursor:pointer;transition:transform .12s ease,background .15s ease,color .15s ease;border:1.5px solid transparent}
+.p-dark{background:var(--charcoal-900);color:var(--cream-100);border-color:var(--charcoal-900)}
+.p-dark:hover{background:var(--charcoal-700)}
+.p-accent{background:var(--terracotta-500);color:#fff;border-color:var(--terracotta-500)}
+.p-accent:hover{background:var(--terracotta-600);border-color:var(--terracotta-600)}
+.p-out{background:transparent;color:var(--charcoal-900);border-color:var(--border-default)}
+.p-out:hover{border-color:var(--charcoal-900)}
+.navlink{font-family:"Montserrat";font-weight:500;font-size:14px;color:var(--charcoal-700);cursor:pointer}
+.navlink:hover{color:var(--terracotta-500)}
+.lift{transition:transform .2s ease,box-shadow .2s ease}
+.lift:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg)}
+.post-body p{margin:0 0 22px;font-size:17px;line-height:1.8;color:var(--charcoal-700)}
+
+/* nav/footer shared across pages */
+.site-nav{display:flex;align-items:center;justify-content:space-between;padding:20px 60px;background:var(--cream-200);border-bottom:1px solid var(--border-subtle);position:sticky;top:0;z-index:5}
+.site-footer{background:var(--ink-900);padding:48px 60px 34px;color:var(--cream-100)}
+.site-footer .footer-inner{max-width:1280px;margin:0 auto}
+.site-footer .footer-cols{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:32px;padding-bottom:32px;border-bottom:1px solid rgba(255,255,255,.12)}
+.site-footer .footer-col{display:flex;flex-direction:column;gap:10px;font-size:13px;color:rgba(241,236,233,.7)}
+.site-footer .footer-bottom{display:flex;justify-content:space-between;align-items:center;padding-top:20px;font-size:11px;color:rgba(241,236,233,.5)}
+
+@media (max-width: 720px) {
+  .site-nav{padding:16px 20px}
+  .site-nav div[style*="gap:30px"]{gap:16px}
+}
