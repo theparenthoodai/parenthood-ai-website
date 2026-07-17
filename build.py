@@ -14,10 +14,10 @@ OUTPUT_DIR = ROOT / "blog"
 
 NAV = """  <div class="site-nav">
     <a href="{root}index.html" style="display:flex;align-items:center;gap:10px">
-      <img src="{root}assets/img/logo-mark.png" alt="Parenthood.ai" style="height:40px;width:auto">
-      <span class="serif" style="font-size:22px;font-weight:600;color:var(--charcoal-900);letter-spacing:.01em">parenthood<span style="color:var(--terracotta-500)">.ai</span></span>
+      <img class="nav-logo" src="{root}assets/img/logo-mark.png" alt="Parenthood.ai" style="height:40px;width:auto">
+      <span class="serif brand-word" style="font-size:22px;font-weight:600;color:var(--charcoal-900);letter-spacing:.01em">parenthood<span style="color:var(--terracotta-500)">.ai</span></span>
     </a>
-    <div style="display:flex;align-items:center;gap:30px">
+    <div class="nav-links" style="display:flex;align-items:center;gap:30px">
       <a class="navlink" href="{root}index.html#guides-section">Free guides</a>
       <a class="navlink" href="{root_or_dot}" style="color:var(--terracotta-500)">Blog</a>
       <a class="navlink" href="{root}index.html#about">About</a>
@@ -67,9 +67,9 @@ PAGE = """<!DOCTYPE html>
 </html>
 """
 
-ARTICLE_CONTENT = """  <div style="padding:64px 24px 96px;flex:1">
+ARTICLE_CONTENT = """  <div class="post-article" style="padding:64px 24px 96px;flex:1">
     <div style="max-width:680px;margin:0 auto">
-      <h1 class="serif" style="margin:0 0 12px;font-weight:600;font-size:46px;line-height:1.12;color:var(--charcoal-900)">{title}</h1>
+      <h1 class="serif post-h1" style="margin:0 0 12px;font-weight:600;font-size:46px;line-height:1.12;color:var(--charcoal-900)">{title}</h1>
       <div class="mono" style="font-size:11px;letter-spacing:.1em;color:var(--sand-400);margin-bottom:40px">{date}</div>
       <div class="post-body">
 {body_html}
@@ -78,13 +78,13 @@ ARTICLE_CONTENT = """  <div style="padding:64px 24px 96px;flex:1">
     </div>
   </div>"""
 
-INDEX_CONTENT = """  <div style="padding:72px 60px 48px;text-align:center">
+INDEX_CONTENT = """  <div class="blog-header" style="padding:72px 60px 48px;text-align:center">
     <div class="script" style="font-size:32px;color:var(--terracotta-500);margin-bottom:4px">from the journal</div>
-    <h1 class="serif" style="margin:0;font-weight:600;font-size:52px;color:var(--charcoal-900)">The Blog</h1>
+    <h1 class="serif blog-h1" style="margin:0;font-weight:600;font-size:52px;color:var(--charcoal-900)">The Blog</h1>
     <p style="margin:16px auto 0;max-width:520px;font-size:15px;line-height:1.6;color:var(--charcoal-500)">Honest writing about learning AI as a parent, one step at a time.</p>
   </div>
 
-  <div style="padding:8px 60px 100px;flex:1">
+  <div class="blog-list" style="padding:8px 60px 100px;flex:1">
     <div style="max-width:820px;margin:0 auto;display:flex;flex-direction:column;gap:24px">
 {cards}
       <div style="border:1px dashed var(--border-default);border-radius:16px;padding:32px 34px;opacity:.6;text-align:center">

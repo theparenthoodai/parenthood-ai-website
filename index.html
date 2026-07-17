@@ -20,10 +20,10 @@
   <!-- nav -->
   <div class="site-nav">
     <a href="index.html" style="display:flex;align-items:center;gap:10px">
-      <img src="assets/img/logo-mark.png" alt="Parenthood.ai" style="height:40px;width:auto">
-      <span class="serif" style="font-size:22px;font-weight:600;color:var(--charcoal-900);letter-spacing:.01em">parenthood<span style="color:var(--terracotta-500)">.ai</span></span>
+      <img class="nav-logo" src="assets/img/logo-mark.png" alt="Parenthood.ai" style="height:40px;width:auto">
+      <span class="serif brand-word" style="font-size:22px;font-weight:600;color:var(--charcoal-900);letter-spacing:.01em">parenthood<span style="color:var(--terracotta-500)">.ai</span></span>
     </a>
-    <div style="display:flex;align-items:center;gap:30px">
+    <div class="nav-links" style="display:flex;align-items:center;gap:30px">
       <a class="navlink" href="#guides-section">Free guides</a>
       <a class="navlink" href="blog/">Blog</a>
       <a class="navlink" href="#about">About</a>
@@ -31,11 +31,11 @@
   </div>
 
   <!-- hero -->
-  <div style="position:relative;padding:88px 60px 72px;text-align:center;overflow:hidden">
+  <div class="hero" style="position:relative;padding:88px 60px 72px;text-align:center;overflow:hidden">
     <div style="position:absolute;top:-90px;right:-70px;width:280px;height:280px;border-radius:50%;background:var(--terracotta-500);opacity:.10"></div>
     <div style="position:relative;max-width:760px;margin:0 auto">
-      <div class="script" style="font-size:34px;color:var(--terracotta-500);margin-bottom:6px">your village, on demand</div>
-      <h1 class="serif" style="margin:0;font-weight:600;font-size:64px;line-height:1.04;color:var(--charcoal-900);letter-spacing:-.01em">Simplifying life with<br><span style="font-style:italic;color:var(--terracotta-500)">smarter</span> support.</h1>
+      <div class="script hero-script" style="font-size:34px;color:var(--terracotta-500);margin-bottom:6px">your village, on demand</div>
+      <h1 class="serif hero-h1" style="margin:0;font-weight:600;font-size:64px;line-height:1.04;color:var(--charcoal-900);letter-spacing:-.01em">Simplifying life with<br><span style="font-style:italic;color:var(--terracotta-500)">smarter</span> support.</h1>
       <p style="margin:22px auto 0;max-width:560px;font-size:17px;line-height:1.6;color:var(--charcoal-500)">Free guides and honest writing that turn AI into the extra pair of hands every parent deserves. No jargon. No judgment.</p>
       <div style="display:flex;gap:10px;justify-content:center;margin-top:30px">
         <a class="pill p-accent" href="#guides-section" style="padding:14px 28px;font-size:14px">Get the free guides</a>
@@ -45,8 +45,8 @@
   </div>
 
   <!-- featured free guide -->
-  <div id="guides-section" style="padding:20px 60px 64px;scroll-margin-top:90px">
-    <div style="display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center;background:var(--cream-100);border:1px solid var(--border-subtle);border-radius:20px;padding:44px 46px;max-width:1280px;margin:0 auto">
+  <div id="guides-section" class="sec-featured" style="padding:20px 60px 64px;scroll-margin-top:90px">
+    <div class="featured-card" style="display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center;background:var(--cream-100);border:1px solid var(--border-subtle);border-radius:20px;padding:44px 46px;max-width:1280px;margin:0 auto">
       <div>
         <span class="pill" style="background:var(--surface-accent);color:var(--charcoal-900);padding:5px 13px;font-size:10px;letter-spacing:.14em;text-transform:uppercase">★ Featured · Free guide</span>
         <h2 class="serif" style="margin:16px 0 0;font-weight:600;font-size:38px;line-height:1.1;color:var(--charcoal-900)">The Beginner's Guide to AI for Parents</h2>
@@ -61,7 +61,7 @@
           <span class="mono" style="font-size:11px;color:var(--sand-400)">PDF · 10 pages</span>
         </div>
       </div>
-      <div class="lift" style="justify-self:center;width:270px;height:338px;border-radius:12px;background:var(--ink-900);box-shadow:var(--shadow-lg);padding:26px 24px;box-sizing:border-box;display:flex;flex-direction:column;position:relative;overflow:hidden">
+      <div class="lift guide-book" style="justify-self:center;width:270px;height:338px;border-radius:12px;background:var(--ink-900);box-shadow:var(--shadow-lg);padding:26px 24px;box-sizing:border-box;display:flex;flex-direction:column;position:relative;overflow:hidden">
         <div class="wm" style="align-self:flex-end;color:rgba(241,236,233,.5);font-size:9px">PARENTHOOD.AI</div>
         <div style="margin-top:auto">
           <div class="mono" style="font-size:9px;letter-spacing:.14em;color:var(--terracotta-400);margin-bottom:12px">FREE STARTER GUIDE</div>
@@ -72,7 +72,7 @@
   </div>
 
   <!-- free guides grid -->
-  <div style="padding:8px 60px 64px">
+  <div class="sec-guides" style="padding:8px 60px 64px">
     <div style="max-width:1280px;margin:0 auto">
       <div style="display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:26px">
         <div>
@@ -80,7 +80,7 @@
           <h2 class="serif" style="margin:6px 0 0;font-weight:600;font-size:34px;color:var(--charcoal-900)">Guides &amp; prompt packs</h2>
         </div>
       </div>
-      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px">
+      <div class="guides-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px">
         <div class="lift" style="background:var(--surface-card);border:1px solid var(--border-subtle);border-radius:14px;overflow:hidden">
           <div style="height:150px;background:var(--dustytan-500);display:flex;align-items:flex-end;padding:16px"><div class="serif" style="color:var(--cream-100);font-size:22px;font-weight:600;font-style:italic">Takeout planning</div></div>
           <div style="padding:20px">
@@ -111,7 +111,7 @@
   </div>
 
   <!-- about -->
-  <div id="about" style="padding:64px 60px;display:grid;grid-template-columns:.8fr 1.2fr;gap:48px;align-items:center;max-width:1280px;margin:0 auto;scroll-margin-top:90px">
+  <div id="about" class="about" style="padding:64px 60px;display:grid;grid-template-columns:.8fr 1.2fr;gap:48px;align-items:center;max-width:1280px;margin:0 auto;scroll-margin-top:90px">
     <div style="background:var(--surface-card);border:1px solid var(--border-subtle);border-radius:20px;padding:38px 34px;text-align:center;box-shadow:var(--shadow-sm)">
       <img src="assets/img/logo-mark.png" alt="Parenthood.ai" style="width:190px;height:auto;margin:0 auto">
       <div class="serif" style="margin-top:10px;font-size:26px;font-weight:600;color:var(--charcoal-900)">parenthood<span style="font-style:italic;color:var(--terracotta-500)">.ai</span></div>
@@ -125,11 +125,11 @@
   </div>
 
   <!-- instagram -->
-  <div style="padding:8px 60px 60px;text-align:center">
+  <div class="sec-ig" style="padding:8px 60px 60px;text-align:center">
     <div style="max-width:1280px;margin:0 auto">
       <div class="mono" style="font-size:11px;letter-spacing:.16em;color:var(--terracotta-500)">FROM THE GRID</div>
       <h2 class="serif" style="margin:6px 0 24px;font-weight:600;font-size:30px;color:var(--charcoal-900)">@parenthood.ai</h2>
-      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:16px">
+      <div class="ig-grid" style="display:grid;grid-template-columns:repeat(4,1fr);gap:16px">
         <div class="lift" style="aspect-ratio:4/5;border-radius:12px;background:var(--ink-900);display:flex;align-items:center;justify-content:center;padding:16px"><div class="serif" style="color:var(--cream-100);font-size:17px;font-style:italic;text-align:center">3 prompts to end the witching hour</div></div>
         <div class="lift" style="aspect-ratio:4/5;border-radius:12px;background:var(--dustytan-500);display:flex;align-items:center;justify-content:center;padding:16px"><div class="serif" style="color:var(--cream-100);font-size:17px;font-style:italic;text-align:center">Meal plan in one text</div></div>
         <div class="lift" style="aspect-ratio:4/5;border-radius:12px;background:var(--terracotta-500);display:flex;align-items:center;justify-content:center;padding:16px"><div class="serif" style="color:var(--cream-100);font-size:17px;font-style:italic;text-align:center">You need smarter support</div></div>

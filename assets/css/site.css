@@ -28,7 +28,51 @@ a:hover{color:var(--terracotta-600)}
 .site-footer .footer-col{display:flex;flex-direction:column;gap:10px;font-size:13px;color:rgba(241,236,233,.7)}
 .site-footer .footer-bottom{display:flex;justify-content:space-between;align-items:center;padding-top:20px;font-size:11px;color:rgba(241,236,233,.5)}
 
-@media (max-width: 720px) {
-  .site-nav{padding:16px 20px}
-  .site-nav div[style*="gap:30px"]{gap:16px}
+/* keep media images from overflowing their container on small screens */
+img{max-width:100%}
+
+/* ---- Responsive: tablets and below ---- */
+@media (max-width: 860px) {
+  .site-nav{padding:16px 22px !important}
+  .site-nav .nav-links{gap:18px !important}
+
+  .sec-featured{padding:12px 22px 40px !important}
+  .featured-card{grid-template-columns:1fr !important;gap:28px !important;padding:32px 26px !important}
+
+  .sec-guides{padding:8px 22px 40px !important}
+  .guides-grid{grid-template-columns:1fr !important}
+
+  .about{grid-template-columns:1fr !important;gap:28px !important;padding:40px 22px !important}
+
+  .sec-ig{padding:8px 22px 44px !important}
+  .ig-grid{grid-template-columns:repeat(2,1fr) !important}
+
+  .site-footer{padding:40px 22px 28px}
+  .site-footer .footer-cols{grid-template-columns:1fr 1fr;gap:24px}
+
+  .blog-header{padding:56px 22px 36px !important}
+  .blog-list{padding:8px 22px 72px !important}
+  .post-article{padding:48px 22px 72px !important}
+}
+
+/* ---- Responsive: phones ---- */
+@media (max-width: 560px) {
+  .hero{padding:52px 22px 40px !important}
+  .hero-h1{font-size:38px !important}
+  .hero-script{font-size:26px !important}
+  .blog-h1{font-size:40px !important}
+  .post-h1{font-size:34px !important}
+  .post-body p{font-size:16px}
+  .site-footer .footer-cols{grid-template-columns:1fr}
+  .site-footer .footer-bottom{flex-direction:column;gap:8px;text-align:center}
+
+  /* nav: shrink and allow a graceful wrap so it never overflows a phone */
+  .site-nav{flex-wrap:wrap;row-gap:6px}
+  .nav-logo{height:34px !important}
+  .brand-word{font-size:19px !important}
+  .nav-links{gap:14px !important}
+  .nav-links .navlink{font-size:13px}
+
+  /* keep the featured-guide mock cover inside narrow screens */
+  .guide-book{width:auto !important;max-width:240px;height:300px !important}
 }
