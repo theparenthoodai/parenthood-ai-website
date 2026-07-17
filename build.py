@@ -119,7 +119,7 @@ def parse_post(path: Path) -> dict:
     paragraphs = [p.strip() for p in body.strip().split("\n\n") if p.strip()]
     body_html = "\n".join(f"        <p>{escape(p)}</p>" for p in paragraphs)
     excerpt_source = paragraphs[0] if paragraphs else ""
-    excerpt = excerpt_source if len(excerpt_source) <= 160 else excerpt_source[:157].rsplit(" ", 1)[0] + "…"
+    excerpt = excerpt_source if len(excerpt_source) <= 160 else excerpt_source[:157].rsplit(" ", 1)[0] + "..."
 
     return {
         "title": meta["title"],
@@ -141,7 +141,7 @@ def main():
             body_html=post["body_html"],
         )
         page = PAGE.format(
-            page_title=f"{post['title']} — Parenthood.ai",
+            page_title=f"{post['title']} | Parenthood.ai",
             page_description=escape(post["excerpt"]),
             root="../",
             nav=NAV.format(root="../", root_or_dot="./index.html"),
@@ -162,7 +162,7 @@ def main():
         for post in posts
     )
     index_page = PAGE.format(
-        page_title="The Blog — Parenthood.ai",
+        page_title="The Blog | Parenthood.ai",
         page_description="Honest writing about learning AI as a parent, one step at a time.",
         root="../",
         nav=NAV.format(root="../", root_or_dot="./index.html"),
