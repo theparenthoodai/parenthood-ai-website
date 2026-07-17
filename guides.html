@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Parenthood.ai | Simplifying life with help from AI</title>
-<meta name="description" content="Free guides and honest writing that turn AI into the extra pair of hands every parent deserves. No jargon. No judgment.">
+<title>Free Guides | Parenthood.ai</title>
+<meta name="description" content="Free, practical guides and prompt packs that turn AI into real help for your family. No jargon, no fluff.">
 <link rel="stylesheet" href="assets/css/fonts.css">
 <link rel="stylesheet" href="assets/css/colors.css">
 <link rel="stylesheet" href="assets/css/typography.css">
@@ -14,8 +14,7 @@
 <link rel="stylesheet" href="assets/css/site.css">
 </head>
 <body>
-
-<div style="background:var(--cream-200)">
+<div style="background:var(--cream-200);min-height:100vh;display:flex;flex-direction:column">
 
   <!-- nav -->
   <div class="site-nav">
@@ -24,27 +23,21 @@
       <span class="serif brand-word" style="font-size:22px;font-weight:600;color:var(--charcoal-900);letter-spacing:.01em">parenthood<span style="color:var(--terracotta-500)">.ai</span></span>
     </a>
     <div class="nav-links" style="display:flex;align-items:center;gap:30px">
-      <a class="navlink" href="guides.html">Free guides</a>
+      <a class="navlink" href="guides.html" style="color:var(--terracotta-500)">Free guides</a>
       <a class="navlink" href="blog/">Blog</a>
       <a class="navlink" href="about.html">About</a>
     </div>
   </div>
 
-  <!-- hero -->
-  <div class="hero" style="position:relative;padding:88px 60px 72px;text-align:center;overflow:hidden">
-    <div style="position:absolute;top:-90px;right:-70px;width:280px;height:280px;border-radius:50%;background:var(--terracotta-500);opacity:.10"></div>
-    <div style="position:relative;max-width:760px;margin:0 auto">
-      <div class="script hero-script" style="font-size:34px;color:var(--terracotta-500);margin-bottom:6px">your village, on demand</div>
-      <h1 class="serif hero-h1" style="margin:0;font-weight:600;font-size:64px;line-height:1.04;color:var(--charcoal-900);letter-spacing:-.01em">Simplifying life with<br><span style="font-style:italic;color:var(--terracotta-500)">smarter</span> support.</h1>
-      <p style="margin:22px auto 0;max-width:560px;font-size:17px;line-height:1.6;color:var(--charcoal-500)">Free guides and honest writing that turn AI into the extra pair of hands every parent deserves. No jargon. No judgment.</p>
-      <div style="display:flex;gap:10px;justify-content:center;margin-top:30px">
-        <a class="pill p-accent" href="guides.html" style="padding:14px 28px;font-size:14px">Get the free guides</a>
-      </div>
-    </div>
+  <!-- header -->
+  <div class="blog-header" style="padding:72px 60px 40px;text-align:center">
+    <div class="script" style="font-size:32px;color:var(--terracotta-500);margin-bottom:2px">always free</div>
+    <h1 class="serif blog-h1" style="margin:0;font-weight:600;font-size:52px;color:var(--charcoal-900)">Guides &amp; prompt packs</h1>
+    <p style="margin:16px auto 0;max-width:520px;font-size:15px;line-height:1.6;color:var(--charcoal-500)">Short, practical guides that turn AI into real help for your family. No jargon, no fluff.</p>
   </div>
 
-  <!-- featured free guide -->
-  <div id="guides-section" class="sec-featured" style="padding:20px 60px 64px;scroll-margin-top:90px">
+  <!-- featured guide -->
+  <div class="sec-featured" style="padding:8px 60px 44px">
     <div class="featured-card" style="display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center;background:var(--cream-100);border:1px solid var(--border-subtle);border-radius:20px;padding:44px 46px;max-width:1280px;margin:0 auto">
       <div>
         <span class="pill" style="background:var(--surface-accent);color:var(--charcoal-900);padding:5px 13px;font-size:10px;letter-spacing:.14em;text-transform:uppercase">★ Featured · Free guide</span>
@@ -71,16 +64,9 @@
     </div>
   </div>
 
-  <!-- free guides grid -->
-  <div class="sec-guides" style="padding:8px 60px 64px">
+  <!-- all guides grid -->
+  <div class="sec-guides" style="padding:0 60px 84px">
     <div style="max-width:1280px;margin:0 auto">
-      <div style="display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:26px">
-        <div>
-          <div class="mono" style="font-size:11px;letter-spacing:.16em;color:var(--terracotta-500)">ALWAYS FREE</div>
-          <h2 class="serif" style="margin:6px 0 0;font-weight:600;font-size:34px;color:var(--charcoal-900)">Guides &amp; prompt packs</h2>
-        </div>
-        <a class="navlink" href="guides.html" style="font-weight:600">Browse all →</a>
-      </div>
       <div class="guides-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px">
         <div class="lift" style="background:var(--surface-card);border:1px solid var(--border-subtle);border-radius:14px;overflow:hidden">
           <div style="height:150px;background:var(--dustytan-500);display:flex;align-items:flex-end;padding:16px"><div class="serif" style="color:var(--cream-100);font-size:22px;font-weight:600;font-style:italic">Takeout planning</div></div>
@@ -88,7 +74,7 @@
             <span class="mono" style="font-size:10px;letter-spacing:.1em;color:var(--sand-400)">GUIDE</span>
             <h3 class="serif" style="margin:8px 0 6px;font-size:22px;font-weight:600;color:var(--charcoal-900)">The Family Takeout Planner Kit</h3>
             <p style="margin:0 0 16px;font-size:13px;line-height:1.55;color:var(--charcoal-500)">Two copy-paste prompts that build a working takeout deal tracker, filtered to your family's diet and synced with your partner. Built in one afternoon.</p>
-            <a href="public/guides/takeout-planner.pdf" download style="font-size:13px;font-weight:600;color:var(--terracotta-500)">Download free PDF →</a>
+            <a href="public/guides/takeout-planner.pdf" download="Family-Takeout-Planner-Kit.pdf" style="font-size:13px;font-weight:600;color:var(--terracotta-500)">Download free PDF →</a>
           </div>
         </div>
         <div style="background:var(--surface-card);border:1px dashed var(--border-default);border-radius:14px;overflow:hidden;opacity:.65">
@@ -108,61 +94,6 @@
           </div>
         </div>
       </div>
-    </div>
-  </div>
-
-  <!-- about -->
-  <div id="about" class="about" style="padding:64px 60px;display:grid;grid-template-columns:.8fr 1.2fr;gap:48px;align-items:center;max-width:1280px;margin:0 auto;scroll-margin-top:90px">
-    <div style="background:var(--surface-card);border:1px solid var(--border-subtle);border-radius:20px;padding:38px 34px;text-align:center;box-shadow:var(--shadow-sm)">
-      <img src="assets/img/logo-mark.png" alt="Parenthood.ai" style="width:190px;height:auto;margin:0 auto">
-      <div class="serif" style="margin-top:10px;font-size:26px;font-weight:600;color:var(--charcoal-900)">parenthood<span style="font-style:italic;color:var(--terracotta-500)">.ai</span></div>
-    </div>
-    <div>
-      <div class="mono" style="font-size:11px;letter-spacing:.16em;color:var(--terracotta-500)">WHO WE ARE</div>
-      <h2 class="serif" style="margin:8px 0 16px;font-weight:600;font-size:34px;line-height:1.15;color:var(--charcoal-900)">Every parent deserves a village. AI can be part of yours.</h2>
-      <p style="margin:0;font-size:15px;line-height:1.7;color:var(--charcoal-500);max-width:520px">We demystify AI and turn it into practical, time-saving tools, so you can spend less energy on logistics and more on the people who matter. You're not behind. You're not alone. Progress beats perfect, every time.</p>
-      <div style="display:flex;gap:12px;margin-top:24px"><a class="pill p-out" href="about.html" style="padding:12px 24px;font-size:14px">Read our story</a></div>
-    </div>
-  </div>
-
-  <!-- instagram -->
-  <div class="sec-ig" style="padding:8px 60px 60px;text-align:center">
-    <div style="max-width:1280px;margin:0 auto">
-      <div class="mono" style="font-size:11px;letter-spacing:.16em;color:var(--terracotta-500)">FROM THE GRID</div>
-      <h2 class="serif" style="margin:6px 0 24px;font-weight:600;font-size:30px;color:var(--charcoal-900)">@parenthood.ai</h2>
-      <div id="ig-grid" class="ig-grid" style="display:grid;grid-template-columns:repeat(4,1fr);gap:16px">
-        <div style="aspect-ratio:4/5;border-radius:12px;background:var(--cream-300)"></div>
-        <div style="aspect-ratio:4/5;border-radius:12px;background:var(--cream-300)"></div>
-        <div style="aspect-ratio:4/5;border-radius:12px;background:var(--cream-300)"></div>
-        <div style="aspect-ratio:4/5;border-radius:12px;background:var(--cream-300)"></div>
-      </div>
-      <script>
-      (function(){
-        var FEED='https://feeds.behold.so/awErw4Zr7qMknEBHuV6j',MAX=4;
-        var grid=document.getElementById('ig-grid');
-        if(!grid)return;
-        fetch(FEED).then(function(r){return r.json();}).then(function(d){
-          var posts=(d&&d.posts)||[];
-          if(!posts.length)throw new Error('empty');
-          grid.innerHTML='';
-          posts.slice(0,MAX).forEach(function(p){
-            var s=p.sizes||{};
-            var img=(s.medium&&s.medium.mediaUrl)||(s.small&&s.small.mediaUrl)||p.thumbnailUrl||p.mediaUrl;
-            var a=document.createElement('a');
-            a.href=p.permalink;a.target='_blank';a.rel='noopener';a.className='lift';
-            a.style.cssText='display:block;aspect-ratio:4/5;border-radius:12px;overflow:hidden;background:var(--cream-300)';
-            var im=document.createElement('img');
-            im.src=img;im.loading='lazy';
-            im.alt=(p.prunedCaption||'Post from @parenthood.ai').slice(0,120);
-            im.style.cssText='width:100%;height:100%;object-fit:cover;display:block';
-            a.appendChild(im);grid.appendChild(a);
-          });
-        }).catch(function(){
-          grid.innerHTML='<a href="https://www.instagram.com/parenthood.ai/" target="_blank" rel="noopener" class="mono" style="grid-column:1/-1;color:var(--sand-400);font-size:12px;letter-spacing:.06em;text-align:center;padding:24px">SEE THE LATEST ON @PARENTHOOD.AI &rarr;</a>';
-        });
-      })();
-      </script>
-      <div style="margin-top:26px"><a class="pill p-out" href="https://www.instagram.com/parenthood.ai/" target="_blank" rel="noopener" style="padding:12px 26px;font-size:14px">Follow @parenthood.ai</a></div>
     </div>
   </div>
 
