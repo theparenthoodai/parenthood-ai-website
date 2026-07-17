@@ -31,8 +31,7 @@ FOOTER = """  <div class="site-footer">
           <span class="serif" style="font-size:24px;font-weight:600;color:var(--cream-100)">parenthood<span style="color:var(--terracotta-400)">.ai</span></span>
           <p style="margin:12px 0 0;font-size:13px;line-height:1.6;color:rgba(241,236,233,.6);max-width:260px">Simplifying life with help from AI. One simple win at a time.</p>
         </div>
-        <div class="footer-col"><span class="wm" style="color:var(--sand-400);margin-bottom:4px">EXPLORE</span><a href="{root}index.html#guides-section" style="color:inherit">Free guides</a><span>The shop</span><a href="{root_or_dot}" style="color:inherit">Blog</a><a href="{root}index.html#about" style="color:inherit">About</a></div>
-        <div class="footer-col"><span class="wm" style="color:var(--sand-400);margin-bottom:4px">SUPPORT</span><span>Contact</span><span>FAQ</span><span>License</span></div>
+        <div class="footer-col"><span class="wm" style="color:var(--sand-400);margin-bottom:4px">EXPLORE</span><a href="{root}index.html#guides-section" style="color:inherit">Free guides</a><a href="{root_or_dot}" style="color:inherit">Blog</a><a href="{root}index.html#about" style="color:inherit">About</a></div>
         <div class="footer-col"><span class="wm" style="color:var(--sand-400);margin-bottom:4px">FOLLOW</span><a href="https://www.instagram.com/parenthood.ai/" target="_blank" rel="noopener" style="color:inherit">Instagram</a></div>
       </div>
       <div class="footer-bottom">
