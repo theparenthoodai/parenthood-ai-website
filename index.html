@@ -128,12 +128,38 @@
     <div style="max-width:1280px;margin:0 auto">
       <div class="mono" style="font-size:11px;letter-spacing:.16em;color:var(--terracotta-500)">FROM THE GRID</div>
       <h2 class="serif" style="margin:6px 0 24px;font-weight:600;font-size:30px;color:var(--charcoal-900)">@parenthood.ai</h2>
-      <div class="ig-grid" style="display:grid;grid-template-columns:repeat(4,1fr);gap:16px">
-        <div class="lift" style="aspect-ratio:4/5;border-radius:12px;background:var(--ink-900);display:flex;align-items:center;justify-content:center;padding:16px"><div class="serif" style="color:var(--cream-100);font-size:17px;font-style:italic;text-align:center">3 prompts to end the witching hour</div></div>
-        <div class="lift" style="aspect-ratio:4/5;border-radius:12px;background:var(--dustytan-500);display:flex;align-items:center;justify-content:center;padding:16px"><div class="serif" style="color:var(--cream-100);font-size:17px;font-style:italic;text-align:center">Meal plan in one text</div></div>
-        <div class="lift" style="aspect-ratio:4/5;border-radius:12px;background:var(--terracotta-500);display:flex;align-items:center;justify-content:center;padding:16px"><div class="serif" style="color:var(--cream-100);font-size:17px;font-style:italic;text-align:center">You need smarter support</div></div>
-        <div class="lift" style="aspect-ratio:4/5;border-radius:12px;background:var(--cream-300);display:flex;align-items:center;justify-content:center;padding:16px"><div class="serif" style="color:var(--charcoal-700);font-size:17px;font-style:italic;text-align:center">Save this for Monday</div></div>
+      <div id="ig-grid" class="ig-grid" style="display:grid;grid-template-columns:repeat(4,1fr);gap:16px">
+        <div style="aspect-ratio:4/5;border-radius:12px;background:var(--cream-300)"></div>
+        <div style="aspect-ratio:4/5;border-radius:12px;background:var(--cream-300)"></div>
+        <div style="aspect-ratio:4/5;border-radius:12px;background:var(--cream-300)"></div>
+        <div style="aspect-ratio:4/5;border-radius:12px;background:var(--cream-300)"></div>
       </div>
+      <script>
+      (function(){
+        var FEED='https://feeds.behold.so/awErw4Zr7qMknEBHuV6j',MAX=4;
+        var grid=document.getElementById('ig-grid');
+        if(!grid)return;
+        fetch(FEED).then(function(r){return r.json();}).then(function(d){
+          var posts=(d&&d.posts)||[];
+          if(!posts.length)throw new Error('empty');
+          grid.innerHTML='';
+          posts.slice(0,MAX).forEach(function(p){
+            var s=p.sizes||{};
+            var img=(s.medium&&s.medium.mediaUrl)||(s.small&&s.small.mediaUrl)||p.thumbnailUrl||p.mediaUrl;
+            var a=document.createElement('a');
+            a.href=p.permalink;a.target='_blank';a.rel='noopener';a.className='lift';
+            a.style.cssText='display:block;aspect-ratio:4/5;border-radius:12px;overflow:hidden;background:var(--cream-300)';
+            var im=document.createElement('img');
+            im.src=img;im.loading='lazy';
+            im.alt=(p.prunedCaption||'Post from @parenthood.ai').slice(0,120);
+            im.style.cssText='width:100%;height:100%;object-fit:cover;display:block';
+            a.appendChild(im);grid.appendChild(a);
+          });
+        }).catch(function(){
+          grid.innerHTML='<a href="https://www.instagram.com/parenthood.ai/" target="_blank" rel="noopener" class="mono" style="grid-column:1/-1;color:var(--sand-400);font-size:12px;letter-spacing:.06em;text-align:center;padding:24px">SEE THE LATEST ON @PARENTHOOD.AI &rarr;</a>';
+        });
+      })();
+      </script>
       <div style="margin-top:26px"><a class="pill p-out" href="https://www.instagram.com/parenthood.ai/" target="_blank" rel="noopener" style="padding:12px 26px;font-size:14px">Follow @parenthood.ai</a></div>
     </div>
   </div>
