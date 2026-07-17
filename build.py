@@ -13,7 +13,8 @@ CONTENT_DIR = ROOT / "content" / "blog"
 OUTPUT_DIR = ROOT / "blog"
 
 NAV = """  <div class="site-nav">
-    <a href="{root}index.html" style="display:flex;align-items:center;gap:11px">
+    <a href="{root}index.html" style="display:flex;align-items:center;gap:10px">
+      <img src="{root}assets/img/logo-mark.png" alt="Parenthood.ai" style="height:40px;width:auto">
       <span class="serif" style="font-size:22px;font-weight:600;color:var(--charcoal-900);letter-spacing:.01em">parenthood<span style="color:var(--terracotta-500)">.ai</span></span>
     </a>
     <div style="display:flex;align-items:center;gap:30px">
