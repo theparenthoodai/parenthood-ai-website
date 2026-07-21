@@ -1,6 +1,6 @@
 ---
 title: "Is this our Cheap House Moment?"
-date: "July 2026"
+date: "2026-07-13"
 ---
 
 The other day I was at the park with my daughter and my mother-in-law. She looked over at a row of condos and asked me how much I thought they were going for. "Probably $700,000, minimum," I said. She laughed. "Oh my goodness. In my day those would have been fifty, maybe a hundred thousand."

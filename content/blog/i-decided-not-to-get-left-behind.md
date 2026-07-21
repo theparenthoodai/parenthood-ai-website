@@ -1,6 +1,6 @@
 ---
 title: "I Decided Not to Get Left Behind"
-date: "July 2026"
+date: "2026-07-08"
 ---
 
 My whole life, I've felt like I was behind everyone.

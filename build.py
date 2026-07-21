@@ -5,6 +5,7 @@ Run this after adding or editing a post in content/blog/, then commit the
 regenerated HTML. Netlify serves plain static files, no build step there.
 """
 import re
+import datetime
 from pathlib import Path
 from html import escape
 
@@ -86,9 +87,6 @@ INDEX_CONTENT = """  <div class="blog-header" style="padding:72px 60px 48px;text
   <div class="blog-list" style="padding:8px 60px 100px;flex:1">
     <div style="max-width:820px;margin:0 auto;display:flex;flex-direction:column;gap:24px">
 {cards}
-      <div style="border:1px dashed var(--border-default);border-radius:16px;padding:32px 34px;opacity:.6;text-align:center">
-        <span class="mono" style="font-size:11px;letter-spacing:.14em;color:var(--sand-400)">MORE POSTS COMING SOON</span>
-      </div>
     </div>
   </div>"""
 
@@ -116,14 +114,44 @@ def parse_post(path: Path) -> dict:
         key, _, value = line.partition(":")
         meta[key.strip()] = value.strip().strip('"')
 
-    paragraphs = [p.strip() for p in body.strip().split("\n\n") if p.strip()]
-    body_html = "\n".join(f"        <p>{escape(p)}</p>" for p in paragraphs)
-    excerpt_source = paragraphs[0] if paragraphs else ""
+    # Body is light markdown: blank-line-separated blocks. A block starting with
+    # "## " (or "# ") is a section subheading; everything else is a paragraph.
+    blocks = [b.strip() for b in body.strip().split("\n\n") if b.strip()]
+    parts = []
+    first_para = ""
+    for b in blocks:
+        if b.startswith("## ") or b.startswith("# "):
+            heading = b.lstrip("#").strip()
+            parts.append(
+                '        <h2 class="serif" style="margin:38px 0 12px;font-weight:600;'
+                'font-size:27px;line-height:1.25;color:var(--charcoal-900)">'
+                f"{escape(heading)}</h2>"
+            )
+        else:
+            para = " ".join(line.strip() for line in b.splitlines())
+            parts.append(f"        <p>{escape(para)}</p>")
+            if not first_para:
+                first_para = para
+    body_html = "\n".join(parts)
+    excerpt_source = first_para
     excerpt = excerpt_source if len(excerpt_source) <= 160 else excerpt_source[:157].rsplit(" ", 1)[0] + "..."
+
+    # `date` is an ISO date (YYYY-MM-DD) used only to order posts newest-first.
+    # It is never shown as a number; readers see the friendly "Month Year" form.
+    # Posts are standalone thoughts, deliberately not numbered or sequenced.
+    raw_date = meta["date"]
+    try:
+        parsed = datetime.date.fromisoformat(raw_date)
+        display_date = parsed.strftime("%B %Y")
+        sort_key = parsed.isoformat()
+    except ValueError:
+        display_date = raw_date
+        sort_key = raw_date
 
     return {
         "title": meta["title"],
-        "date": meta["date"],
+        "date": display_date,
+        "sort_key": sort_key,
         "slug": slugify(meta["title"]),
         "body_html": body_html,
         "excerpt": excerpt,
@@ -131,13 +159,16 @@ def parse_post(path: Path) -> dict:
 
 
 def main():
-    posts = [parse_post(p) for p in sorted(CONTENT_DIR.glob("*.md"))]
+    # Order by date, newest first. Filenames are just slugs, never numbered,
+    # so the order never implies the posts build on or agree with each other.
+    posts = [parse_post(p) for p in CONTENT_DIR.glob("*.md")]
+    posts.sort(key=lambda p: p["sort_key"], reverse=True)
     OUTPUT_DIR.mkdir(exist_ok=True)
 
     for post in posts:
         content = ARTICLE_CONTENT.format(
             title=escape(post["title"]),
-            date=escape(post["date"]).upper(),
+            date="PUBLISHED · " + escape(post["date"]).upper(),
             body_html=post["body_html"],
         )
         page = PAGE.format(
@@ -155,7 +186,7 @@ def main():
     cards = "\n".join(
         CARD.format(
             slug=post["slug"],
-            date_upper=escape(post["date"]).upper(),
+            date_upper="PUBLISHED · " + escape(post["date"]).upper(),
             title=escape(post["title"]),
             excerpt=escape(post["excerpt"]),
         )
