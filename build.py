@@ -49,6 +49,17 @@ PAGE = """<!DOCTYPE html>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{page_title}</title>
 <meta name="description" content="{page_description}">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32.png">
+<link rel="icon" type="image/png" sizes="64x64" href="/assets/img/favicon.png">
+<link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+<meta property="og:type" content="{og_type}">
+<meta property="og:site_name" content="Parenthood.ai">
+<meta property="og:title" content="{page_title}">
+<meta property="og:description" content="{page_description}">
+<meta property="og:url" content="{og_url}">
+<meta property="og:image" content="https://theparenthoodai.com/assets/img/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://theparenthoodai.com/assets/img/og-image.png">
 <link rel="stylesheet" href="{root}assets/css/fonts.css">
 <link rel="stylesheet" href="{root}assets/css/colors.css">
 <link rel="stylesheet" href="{root}assets/css/typography.css">
@@ -174,6 +185,8 @@ def main():
         page = PAGE.format(
             page_title=f"{post['title']} | Parenthood.ai",
             page_description=escape(post["excerpt"]),
+            og_type="article",
+            og_url=f"https://theparenthoodai.com/blog/{post['slug']}.html",
             root="../",
             nav=NAV.format(root="../", root_or_dot="./index.html"),
             content=content,
@@ -195,6 +208,8 @@ def main():
     index_page = PAGE.format(
         page_title="The Blog | Parenthood.ai",
         page_description="Honest writing about learning AI as a parent, one step at a time.",
+        og_type="website",
+        og_url="https://theparenthoodai.com/blog/",
         root="../",
         nav=NAV.format(root="../", root_or_dot="./index.html"),
         content=INDEX_CONTENT.format(cards=cards),
