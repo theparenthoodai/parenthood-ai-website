@@ -1,6 +1,12 @@
 [build]
   publish = "."
 
+# Old single guides page moved to the /guides/ folder (one page per guide).
+[[redirects]]
+  from = "/guides.html"
+  to = "/guides/"
+  status = 301
+
 [[headers]]
   for = "/public/guides/*"
   [headers.values]
